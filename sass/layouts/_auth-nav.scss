@@ -1,0 +1,40 @@
+.auth-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.auth-nav__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.auth-nav__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 31px;
+
+  transition: color var(--animation);
+}
+
+.auth-nav__link:hover,
+.auth-nav__link:focus {
+  color: var(--accent-color);
+}
+
+.auth-nav__icon {
+  margin-right: 10px;
+}
+
+.auth-nav__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
