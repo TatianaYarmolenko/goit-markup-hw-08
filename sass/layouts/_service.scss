@@ -1,3 +1,11 @@
+.service {
+  
+
+  // @media screen and (max-width: 1100) {
+  //   display: none;
+  // }
+}
+
 .service__title {
   font-weight: 700;
   line-height: 1.14;
@@ -14,14 +22,18 @@
 .service__list {
   display: flex;
   align-items: center;
-}
 
-.service__item {
-  margin-left: 30px;
+
+  @media screen and (max-width: 1100) {
+    display: none;
+  }
+}
 }
 
 .service__item {
   position: relative;
+
+  margin-left: 30px;
 }
 
 .service__apps {

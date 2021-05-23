@@ -398,6 +398,20 @@ textarea {
   color: var(--primary-white-color);
 }
 
+@media screen and (max-width: 767.98px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
 .header {
   display: flex;
   border: 1px solid #ececec;
@@ -571,6 +585,16 @@ textarea {
   text-align: center;
 }
 
+.service {
+  display: block;
+}
+
+@media screen and (max-width: 1100) {
+  .service {
+    display: none;
+  }
+}
+
 .service__title {
   font-weight: 700;
   line-height: 1.14;
@@ -588,11 +612,8 @@ textarea {
 }
 
 .service__item {
-  margin-left: 30px;
-}
-
-.service__item {
   position: relative;
+  margin-left: 30px;
 }
 
 .service__apps {
