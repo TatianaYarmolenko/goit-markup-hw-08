@@ -17,7 +17,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid red;
 }
 
 body {
@@ -83,38 +82,16 @@ ul {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 .container {
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: aqua;
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: coral;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    background-color: lightgreen;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-    background-color: yellow;
-  }
 }
 
 .address {
@@ -186,7 +163,8 @@ img {
   min-height: 581px;
   min-width: 528px;
   background-color: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
@@ -369,7 +347,8 @@ textarea {
 .control__btn:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .hero {
@@ -378,7 +357,12 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--dark-bg);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url(../images/hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -406,10 +390,10 @@ textarea {
 .header__logo-text {
   color: var(--title-text-color);
 }
-
 .header__container {
   display: flex;
   align-items: center;
+
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
@@ -424,6 +408,7 @@ textarea {
 
 .header__list {
   display: flex;
+
   margin-left: 95px;
 }
 
@@ -565,34 +550,17 @@ textarea {
   color: var(--primary-white-color);
 }
 
-.service {
-  display: none;
-}
-
-@media screen and (min-width: 1200px) {
-  .service {
-    display: flex;
-  }
-}
-
 .service__list {
   display: flex;
   align-items: center;
 }
 
 .service__item {
+  margin-left: 30px;
+}
+
+.service__item {
   position: relative;
-  margin-right: 30px;
-}
-
-@media screen and (min-width: 1200px) {
-  .service__item {
-    flex-basis: calc(100% / 3);
-  }
-}
-
-.service__item:last-child {
-  margin-right: 0px;
 }
 
 .service__apps {
@@ -614,35 +582,19 @@ textarea {
 
 .team__list {
   display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  align-items: center;
 }
 
 .team__item {
-  width: 100%;
   text-align: center;
-  margin: 15px;
   background: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (min-width: 480px) {
-  .team__item {
-    max-width: 450px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .team__item {
-    max-width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team__item {
-    flex-basis: calc((100% - 4 * 30px) / 4);
-  }
+.team__item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .our-team {
@@ -711,38 +663,26 @@ textarea {
 
 .client__list {
   display: flex;
-  margin: -15px;
-  flex-wrap: wrap;
 }
 
 .client__item {
   align-items: center;
+  width: calc(100% - 6 * 30px / 6);
   height: 92px;
   padding: 0;
   box-sizing: border-box;
   border-radius: 4px;
-  flex-basis: calc((100% - 4 * 15px) / 2);
-  margin: 15px;
-  flex-basis: calc((100% - 2 * 30px) / 2);
 }
 
-@media screen and (min-width: 768px) {
-  .client__item {
-    flex-basis: calc((100% - 3 * 30px) / 3);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .client__item {
-    flex-basis: calc((100% - 6 * 30px) / 6);
-  }
+.client__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .client__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -919,7 +859,8 @@ textarea {
 .portfolio__link:focus,
 .portfolio__link:hover .portfolio-overlay,
 .portfolio__link:focus .portfolio-overlay {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
   transform: translateY(0);
   opacity: 1;
 }

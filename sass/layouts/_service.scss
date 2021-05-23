@@ -11,32 +11,17 @@
   color: var(--primary-white-color);
 }
 
-.service {
-  display: none;
-
-  @media screen and (min-width: 1200px) {
-    display: flex;
-  }
-}
-
 .service__list {
   display: flex;
   align-items: center;
 }
 
 .service__item {
-  position: relative;
-
-  // flex-basis: 100%;
-  margin-right: 30px;
-
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 3);
-  }
+  margin-left: 30px;
 }
 
-.service__item:last-child {
-  margin-right: 0px;
+.service__item {
+  position: relative;
 }
 
 .service__apps {
