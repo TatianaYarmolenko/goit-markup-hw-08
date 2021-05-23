@@ -83,7 +83,7 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -565,17 +565,34 @@ textarea {
   color: var(--primary-white-color);
 }
 
+.service {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .service {
+    display: flex;
+  }
+}
+
 .service__list {
   display: flex;
   align-items: center;
 }
 
 .service__item {
-  margin-left: 30px;
+  position: relative;
+  margin-right: 30px;
 }
 
-.service__item {
-  position: relative;
+@media screen and (min-width: 1200px) {
+  .service__item {
+    flex-basis: calc(100% / 3);
+  }
+}
+
+.service__item:last-child {
+  margin-right: 0px;
 }
 
 .service__apps {
@@ -596,15 +613,41 @@ textarea {
 }
 
 .team__list {
-  display: flex;
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__list {
+    display: flex;
+  }
+}
+
 .team__item {
+  flex-basis: 100%;
   text-align: center;
+  margin-bottom: 30px;
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+  }
 }
 
 .team__item:not(:first-child) {
@@ -681,11 +724,32 @@ textarea {
 
 .client__item {
   align-items: center;
-  width: calc(100% - 6 * 30px / 6);
   height: 92px;
   padding: 0;
   box-sizing: border-box;
   border-radius: 4px;
+  margin: 15px;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 480px) {
+  .client__item {
+    flex-basis: calc(100% - 2 * 30px / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client__item {
+    flex-basis: calc(100% - 3 * 30px / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client__item {
+    flex-basis: calc(100% - 6 * 30px / 6);
+    flex-wrap: wrap;
+  }
 }
 
 .client__item:not(:last-child) {
