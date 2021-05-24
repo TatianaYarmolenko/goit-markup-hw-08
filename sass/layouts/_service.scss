@@ -1,9 +1,7 @@
 .service {
-  
-
-  // @media screen and (max-width: 1100) {
-  //   display: none;
-  // }
+  @media screen and (max-width: 1199.98px) {
+    display: none;
+  }
 }
 
 .service__title {
@@ -22,12 +20,6 @@
 .service__list {
   display: flex;
   align-items: center;
-
-
-  @media screen and (max-width: 1100) {
-    display: none;
-  }
-}
 }
 
 .service__item {
