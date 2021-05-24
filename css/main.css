@@ -813,22 +813,34 @@ textarea {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 480px) {
-  .footer {
-    display: block;
-  }
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199.98px) {
   .footer {
-    display: flex;
+    justify-content: space-around;
   }
 }
 
 .footer-first {
-  display: block;
-  min-width: 231px;
+  width: 231px;
   height: 135px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .footer-first {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-first {
+    text-align: left;
+  }
 }
 
 .footer__logo-text {
@@ -836,23 +848,20 @@ textarea {
 }
 
 .footer-social {
-  display: block;
   text-align: center;
   width: 250px;
   height: 135px;
-  padding-top: 12px;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 480px) {
   .footer-social {
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer-social {
-    margin-left: 70px;
+    padding-top: 12px;
   }
 }
 
@@ -925,9 +934,18 @@ textarea {
   background-color: var(--accent-color);
 }
 
-.footer-input {
-  margin-left: 93px;
-  padding-top: 12px;
+@media screen and (max-width: 1199.98px) {
+  .footer-input {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-input {
+    padding-top: 12px;
+  }
 }
 
 .footer-input__title {
@@ -939,8 +957,20 @@ textarea {
 }
 
 .footer-mailing {
-  display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .footer-mailing {
+    display: block;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-mailing {
+    display: flex;
+  }
 }
 
 .footer-mailing__mail {
@@ -949,7 +979,7 @@ textarea {
   letter-spacing: 0.03em;
   background-color: var(--dark-bg);
   color: var(--primary-white-color);
-  width: 358px;
+  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -957,7 +987,20 @@ textarea {
   border-radius: 4px;
   outline: none;
   padding-left: 16px;
-  margin-right: 12px;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .footer-mailing__mail {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-mailing__mail {
+    max-width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .footer-mailing__button {

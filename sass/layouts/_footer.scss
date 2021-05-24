@@ -5,22 +5,27 @@
 }
 
 .footer {
-  @media screen and (min-width: 480px) {
-    display: block;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1200px) {
-    display: flex;
+  @media screen and (max-width: 1199.98px) {
+    justify-content: space-around;
   }
 }
 
 .footer-first {
-  display: block;
-  min-width: 231px;
+  width: 231px;
   height: 135px;
+  text-align: center;
+
+  @media screen and (max-width: 1199.98px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer__logo-text {
@@ -28,22 +33,16 @@
 }
 
 .footer-social {
-  display: block;
   text-align: center;
   width: 250px;
   height: 135px;
-  padding-top: 12px;
 
-  @media screen and (max-width: 767.98px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-left: 70px;
+    padding-top: 12px;
   }
 }
 
@@ -111,8 +110,15 @@
 }
 
 .footer-input {
-  margin-left: 93px;
-  padding-top: 12px;
+  @media screen and (max-width: 1199.98px) {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+  }
 }
 
 .footer-input__title {
@@ -125,8 +131,16 @@
 }
 
 .footer-mailing {
-  display: flex;
   align-items: center;
+
+  @media screen and (max-width: 1199.98px) {
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .footer-mailing__mail {
@@ -135,7 +149,7 @@
   letter-spacing: 0.03em;
   background-color: var(--dark-bg);
   color: var(--primary-white-color);
-  width: 358px;
+  width: 450px;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -144,7 +158,20 @@
   border-radius: 4px;
   outline: none;
   padding-left: 16px;
-  margin-right: 12px;
+
+  @media screen (max-width: 767.98px) {
+    max-width: 450px;
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .footer-mailing__button {
