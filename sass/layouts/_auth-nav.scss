@@ -1,27 +1,50 @@
 .auth-nav {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: none;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  @media screen and(min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+  }
+
+  @media screen and(min-width: 768px) and (max-width: 1199.98px) {
+    display: block;
+  }
 }
 
 .auth-nav__item:not(:first-child) {
-  margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+  }
 }
 
 .auth-nav__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 32px;
-  padding-bottom: 31px;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-  transition: color var(--animation);
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 31px;
+
+    transition: color var(--animation);
+  }
+}
+
+.auth-nav__link:last-child {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    margin-bottom: 0px;
+  }
 }
 
 .auth-nav__link:hover,
@@ -34,7 +57,15 @@
 }
 
 .auth-nav__item {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+  }
 }

@@ -137,10 +137,17 @@ img {
 .logo {
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--accent-color);
   text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .btn {
@@ -373,6 +380,20 @@ textarea {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.mobile-menu__btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu__btn {
+    display: none;
+  }
+}
+
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -436,32 +457,67 @@ textarea {
 }
 
 .header__list {
-  display: flex;
-  margin-left: 95px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header__list {
+    display: flex;
+    margin-left: 95px;
+  }
 }
 
 .auth-nav {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  display: none;
 }
 
-.auth-nav__item:not(:first-child) {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .auth-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+  }
 }
 
-.auth-nav__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 32px;
-  padding-bottom: 31px;
-  transition: color var(--animation);
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .auth-nav {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__item:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auth-nav__link {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 31px;
+    transition: color var(--animation);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .auth-nav__link:last-child {
+    margin-bottom: 0px;
+  }
 }
 
 .auth-nav__link:hover,
@@ -474,9 +530,21 @@ textarea {
 }
 
 .auth-nav__item {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .auth-nav__item {
+    display: block;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__item {
+    display: inline-flex;
+  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -819,9 +887,35 @@ textarea {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 1199.98px) {
-  .footer {
+.footer-unit {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 767.98px) {
+  .footer-unit {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .footer-unit {
+    width: 100%;
     justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-unit {
+    width: 45%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-unit {
+    text-align: center;
   }
 }
 
@@ -851,17 +945,13 @@ textarea {
   text-align: center;
   width: 250px;
   height: 135px;
-}
-
-@media screen and (min-width: 480px) {
-  .footer-social {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .footer-social {
     padding-top: 12px;
+    margin-bottom: 0;
   }
 }
 
@@ -979,7 +1069,8 @@ textarea {
   letter-spacing: 0.03em;
   background-color: var(--dark-bg);
   color: var(--primary-white-color);
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -989,9 +1080,14 @@ textarea {
   padding-left: 16px;
 }
 
+@media screen and (min-width: 480px) {
+  .footer-mailing__mail {
+    width: 450px;
+  }
+}
+
 @media screen and (max-width: 1199.98px) {
   .footer-mailing__mail {
-    max-width: 450px;
     margin-bottom: 20px;
   }
 }
