@@ -580,9 +580,27 @@ textarea {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .header__container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__container {
+    max-width: 1200px;
+  }
 }
 
 .header__nav {
@@ -1179,6 +1197,10 @@ textarea {
   background-color: var(--accent-color);
 }
 
+.footer-input {
+  width: 100%;
+}
+
 @media screen and (max-width: 1199.98px) {
   .footer-input {
     text-align: center;
@@ -1189,6 +1211,7 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .footer-input {
+    width: 50%;
     padding-top: 12px;
   }
 }
@@ -1208,7 +1231,7 @@ textarea {
 @media screen and (max-width: 1199.98px) {
   .footer-mailing {
     display: block;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 
@@ -1235,6 +1258,12 @@ textarea {
   padding-left: 16px;
 }
 
+@media screen and (max-width: 479.98px) {
+  .footer-mailing__mail {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .footer-mailing__mail {
     width: 450px;
@@ -1249,6 +1278,7 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .footer-mailing__mail {
+    display: block;
     max-width: 358px;
     margin-right: 12px;
   }

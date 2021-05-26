@@ -8,10 +8,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  // @media screen and (max-width: 1199.98px) {
-  //   justify-content: space-around;
-  // }
 }
 
 .footer-unit {
@@ -132,6 +128,8 @@
 }
 
 .footer-input {
+  width: 100%;
+
   @media screen and (max-width: 1199.98px) {
     text-align: center;
     margin-right: auto;
@@ -139,6 +137,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    width: 50%;
     padding-top: 12px;
   }
 }
@@ -157,7 +156,7 @@
 
   @media screen and (max-width: 1199.98px) {
     display: block;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   @media screen and (min-width: 1200px) {
@@ -182,6 +181,10 @@
   outline: none;
   padding-left: 16px;
 
+  @media screen and (max-width: 479.98px) {
+    width: 100%;
+  }
+
   @media screen and (min-width: 480px) {
     width: 450px;
   }
@@ -191,6 +194,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    display: block;
     max-width: 358px;
     margin-right: 12px;
   }
