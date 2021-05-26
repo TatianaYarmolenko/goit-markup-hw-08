@@ -239,8 +239,8 @@
       </section>
 
       <!-- Чем мы занимаемся -->
-      <section class="section">
-        <div class="container service">
+      <section class="section service">
+        <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="service__list">
             <li class="service__item">
@@ -281,17 +281,44 @@
       </section>
 
       <!-- Наша команда -->
-      <section class="section">
-        <div class="container team">
+      <section class="section team">
+        <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/team/photo1.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/desktop/img1_desktop.jpg    1x,
+                    ./images/gallery/desktop/img1@2x_desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/tablet/img1_tablet.jpg    1x,
+                    ./images/gallery/tablet/img1@2x_tablet.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/mobile/img1_mobile.jpg    1x,
+                    ./images/gallery/mobile/img1@2x_mobile.jpg 2x
+                  "
+                  media="(max-width: 767.98px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/gallery/mobile/img1_mobile.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="our-team">
                 <h3 class="our-team__title">Игорь Демьяненко</h3>
                 <p class="our-team__text" lang="en">Product Designer</p>
@@ -655,6 +682,7 @@
               </ul>
             </address>
           </div>
+
           <div class="footer-social">
             <h3 class="footer-social__title">присоединяйтесь</h3>
             <ul class="footer-social__icons">

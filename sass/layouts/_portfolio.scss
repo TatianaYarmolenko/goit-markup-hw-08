@@ -12,7 +12,7 @@
   margin: 15px;
 
   @media screen and (min-width: 480px) {
-    max-width: 450px;
+    width: 100%;
   }
 
   @media screen and (min-width: 768px) {
@@ -25,7 +25,9 @@
 }
 
 .portfolio__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   text-decoration: none;
   transition: box-shadow var(--animation);
@@ -85,6 +87,7 @@
   background: var(--primary-white-color);
   border-top: none;
   border: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .portfolio__title {

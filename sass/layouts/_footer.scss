@@ -60,7 +60,6 @@
   text-align: center;
   width: 250px;
   height: 135px;
-  margin-bottom: 60px;
 
   @media screen and (min-width: 1200px) {
     padding-top: 12px;
@@ -88,6 +87,7 @@
 .footer-social__icons {
   display: flex;
   padding: 0;
+  margin-bottom: 60px;
 
   @media screen and (max-width: 1199.98px) {
     justify-content: center;
