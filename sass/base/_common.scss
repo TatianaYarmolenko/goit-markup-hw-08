@@ -6,7 +6,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid red;
 }
 
 body {
@@ -76,7 +75,6 @@ ul {
 
 img {
   display: block;
-  width: 100%;
-  // max-width: 100%;
+  max-width: 100%;
   height: auto;
 }
